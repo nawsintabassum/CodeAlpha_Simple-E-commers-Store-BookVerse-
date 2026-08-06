@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookVerse | Register</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <header class="navbar-header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-book-open"></i> Book<span>Verse</span>
+            </a>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search books by title, author, or ISBN...">
+                <button type="button" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="books.html" class="nav-link">Books</a></li>
+                <li><a href="cart.html" class="nav-link cart-icon-link">
+                    <i class="fa-solid fa-cart-shopping"></i> Cart
+                    <span class="cart-badge" id="cartCount">0</span>
+                </a></li>
+                <li id="authLinks">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="register.html" class="btn btn-primary active">Register</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <section class="section auth-section bg-light">
+        <div class="container">
+            <div class="auth-card">
+                <div class="auth-header text-center">
+                    <i class="fa-solid fa-user-plus auth-icon"></i>
+                    <h2>Create an Account</h2>
+                    <p>Join BookVerse to track orders, save books, and receive special offers</p>
+                </div>
+
+                <div id="registerAlert" class="alert alert-danger" style="display: none;"></div>
+
+                <form id="registerForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="regUsername"><i class="fa-solid fa-user"></i> Username *</label>
+                        <input type="text" id="regUsername" required placeholder="Choose a username">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regEmail"><i class="fa-solid fa-envelope"></i> Email Address *</label>
+                        <input type="email" id="regEmail" required placeholder="Enter your email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regPassword"><i class="fa-solid fa-lock"></i> Password *</label>
+                        <div class="password-input-wrapper">
+                            <input type="password" id="regPassword" required placeholder="Create a strong password">
+                            <i class="fa-solid fa-eye toggle-password" id="toggleRegPassword"></i>
+                        </div>
+                        <small class="form-hint">At least 8 characters, including a letter and a number.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regConfirmPassword"><i class="fa-solid fa-shield-halved"></i> Confirm Password *</label>
+                        <input type="password" id="regConfirmPassword" required placeholder="Re-enter password">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="remember-me">
+                            <input type="checkbox" id="termsCheck" required> I agree to the <a href="#" class="link-primary">Terms & Conditions</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block btn-lg">
+                        <i class="fa-solid fa-user-check"></i> Register Account
+                    </button>
+                </form>
+
+                <div class="auth-footer text-center">
+                    <p>Already have an account? <a href="login.html" class="link-primary">Log In Here</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <a href="index.html" class="logo footer-logo">
+                    <i class="fa-solid fa-book-open"></i> Book<span>Verse</span>
+                </a>
+                <p>Your premier online bookstore for academic, professional, and recreational reading.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="books.html">All Books</a></li>
+                    <li><a href="cart.html">Shopping Cart</a></li>
+                    <li><a href="login.html">My Account</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="books.html?category=Programming">Programming</a></li>
+                    <li><a href="books.html?category=Computer Science">Computer Science</a></li>
+                    <li><a href="books.html?category=Academic">Academic</a></li>
+                    <li><a href="books.html?category=Business">Business</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul class="contact-info">
+                    <li><i class="fa-solid fa-location-dot"></i> University Campus, Tech City</li>
+                    <li><i class="fa-solid fa-envelope"></i> support@bookverse.com</li>
+                    <li><i class="fa-solid fa-phone"></i> +1 (800) 555-BOOK</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 BookVerse. Developed for University Assignment. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="../js/auth.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>

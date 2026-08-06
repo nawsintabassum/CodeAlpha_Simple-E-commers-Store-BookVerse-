@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookVerse | Home - Online Bookstore</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+    <header class="navbar-header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-book-open"></i> Book<span>Verse</span>
+            </a>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search books by title, author, or ISBN...">
+                <button type="button" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="books.html" class="nav-link">Books</a></li>
+                <li><a href="cart.html" class="nav-link cart-icon-link">
+                    <i class="fa-solid fa-cart-shopping"></i> Cart
+                    <span class="cart-badge" id="cartCount">0</span>
+                </a></li>
+                <li id="authLinks">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="register.html" class="btn btn-primary">Register</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="badge">Welcome to BookVerse</span>
+                <h1>Discover Your Next Great Read</h1>
+                <p>Explore thousands of academic textbooks, programming guides, novels, and bestseller literature delivered straight to your door.</p>
+                <div class="hero-actions">
+                    <a href="books.html" class="btn btn-primary btn-lg">Explore Books <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#categories" class="btn btn-outline btn-lg">Browse Categories</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80" alt="Books Collection Stack">
+            </div>
+        </div>
+    </section>
+    <section class="section categories-section" id="categories">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Featured Categories</h2>
+                <p>Find knowledge tailored to your field and passion</p>
+            </div>
+
+            <div class="category-grid">
+                <a href="books.html?category=Programming" class="category-card">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Programming</h3>
+                    <span>Python, Web & AI</span>
+                </a>
+                <a href="books.html?category=Computer Science" class="category-card">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h3>Computer Science</h3>
+                    <span>Algorithms, OS & Networks</span>
+                </a>
+                <a href="books.html?category=Academic" class="category-card">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h3>Academic</h3>
+                    <span>University Textbooks</span>
+                </a>
+                <a href="books.html?category=Business" class="category-card">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>Business</h3>
+                    <span>Finance, Mgt & Startup</span>
+                </a>
+                <a href="books.html?category=Novel" class="category-card">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                    <h3>Novel</h3>
+                    <span>Fiction & Classics</span>
+                </a>
+                <a href="books.html?category=Science Fiction" class="category-card">
+                    <i class="fa-solid fa-rocket"></i>
+                    <h3>Science Fiction</h3>
+                    <span>Space, AI & Dystopia</span>
+                </a>
+                <a href="books.html?category=History" class="category-card">
+                    <i class="fa-solid fa-landmark"></i>
+                    <h3>History</h3>
+                    <span>World History & Civilizations</span>
+                </a>
+                <a href="books.html?category=Self Development" class="category-card">
+                    <i class="fa-solid fa-brain"></i>
+                    <h3>Self Development</h3>
+                    <span>Growth & Mindset</span>
+                </a>
+                <a href="books.html?category=Children" class="category-card">
+                    <i class="fa-solid fa-child"></i>
+                    <h3>Children</h3>
+                    <span>Stories & Early Learning</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section featured-books-section">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2>Featured Books</h2>
+                    <p>Handpicked selections recommended by our curators</p>
+                </div>
+                <a href="books.html" class="link-btn">View All Books <i class="fa-solid fa-angle-right"></i></a>
+            </div>
+
+            <div class="books-grid" id="featuredBooksContainer">
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="section best-sellers-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2>Best Sellers</h2>
+                    <p>Top trending titles among students and professionals</p>
+                </div>
+                <a href="books.html?filter=bestseller" class="link-btn">Explore Top 50 <i class="fa-solid fa-angle-right"></i></a>
+            </div>
+
+            <div class="books-grid" id="bestSellersContainer">
+                <!-- Dynamically populated via JS -->
+            </div>
+        </div>
+    </section>
+
+    <section class="section reviews-section">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>What Our Readers Say</h2>
+                <p>Trusted by thousands of students and bibliophiles nationwide</p>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"BookVerse delivered my Computer Science textbooks within 2 days! Excellent packaging and clear price transparency."</p>
+                    <div class="reviewer-info">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="User Avatar">
+                        <div>
+                            <h4>Sarah Jenkins</h4>
+                            <span>CS Student, MIT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"The selection of programming books is unmatched. Cash on Delivery made the ordering process super convenient."</p>
+                    <div class="reviewer-info">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="User Avatar">
+                        <div>
+                            <h4>Alex Rivera</h4>
+                            <span>Full Stack Developer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Modern layout, smooth searching, and quick delivery. BookVerse has become my go-to store for all academic material."</p>
+                    <div class="reviewer-info">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="User Avatar">
+                        <div>
+                            <h4>Emily Chen</h4>
+                            <span>Literature Major</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <a href="index.html" class="logo footer-logo">
+                    <i class="fa-solid fa-book-open"></i> Book<span>Verse</span>
+                </a>
+                <p>Your premier online bookstore for academic, professional, and recreational reading. Modern, fast, and reliable.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="books.html">All Books</a></li>
+                    <li><a href="cart.html">Shopping Cart</a></li>
+                    <li><a href="login.html">My Account</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="books.html?category=Programming">Programming</a></li>
+                    <li><a href="books.html?category=Computer Science">Computer Science</a></li>
+                    <li><a href="books.html?category=Academic">Academic</a></li>
+                    <li><a href="books.html?category=Business">Business</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul class="contact-info">
+                    <li><i class="fa-solid fa-location-dot"></i> University Campus, Tech City</li>
+                    <li><i class="fa-solid fa-envelope"></i> support@bookverse.com</li>
+                    <li><i class="fa-solid fa-phone"></i> +1 (800) 555-BOOK</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 BookVerse. Developed for University Assignment. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>
