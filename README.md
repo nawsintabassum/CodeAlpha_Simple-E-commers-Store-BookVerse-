@@ -2,6 +2,18 @@
 
 **BookVerse** is a modern, responsive, and fully functional online bookstore e-commerce web application developed as a university assignment. It features a clean **Blue & White** UI theme, user authentication, catalog searching and filtering, shopping cart functionality, checkout processing, order storage, and an administrative panel powered by Django.
 
+🌐 **Live Demo:** [Click Here to View App](https://nawsintabassum.github.io/CodeAlpha_Simple-E-commers-Store-BookVerse-/ )
+
+## Dashboard Preview
+
+![homepage](./assets/homepage.png)
+![category](./assets/category.png)
+![feature_books](./assets/feature_books.png)
+![review](./assets/review.png)
+![catalog](./assets/catalog.png)
+![seller](./assets/seller.png)
+![cart](./assets/cart.png)
+
 ---
 
 ## 🛠️ Tech Stack
