@@ -1,0 +1,145 @@
+
+@media screen and (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .search-box {
+        width: 35%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        height: 65px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .search-box {
+        display: none; 
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 65px;
+        flex-direction: column;
+        background-color: var(--bg-white);
+        width: 100%;
+        text-align: center;
+        transition: var(--transition-normal);
+        box-shadow: var(--shadow-md);
+        padding: 20px 0;
+        gap: 15px;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    #authLinks {
+        flex-direction: column;
+        width: 80%;
+        margin-top: 10px;
+    }
+
+    #authLinks .btn {
+        width: 100%;
+    }
+
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-image img {
+        max-height: 300px;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 12px;
+    }
+
+    .category-card {
+        padding: 16px;
+    }
+
+    .category-card i {
+        font-size: 1.5rem;
+    }
+
+    .category-card h3 {
+        font-size: 0.95rem;
+    }
+
+    .books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 16px;
+    }
+
+    .book-cover {
+        height: 200px;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .books-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
